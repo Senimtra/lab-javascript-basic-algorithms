@@ -93,7 +93,6 @@ for (i = 0; i < hacker1.length; i++) {
 
 let loremIpsum = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 
-
 let wordCount = 1; // starting at 1, because there will be one more word than spaces
 for (i = 0; i < loremIpsum.length; i++) {
     if (loremIpsum[i] === " ") {
@@ -103,3 +102,19 @@ for (i = 0; i < loremIpsum.length; i++) {
 console.log(`The text contains ${wordCount} words.`);
 
 // B1.2: Make your program count the number of times the Latin word et appears.
+
+let punctReduce = '';
+for (i = 0; i < loremIpsum.length; i++) {
+    if (loremIpsum[i] !== "," && loremIpsum[i] !== ".") { // remove "," + "."
+        punctReduce += loremIpsum[i]
+    }
+}
+
+let etCount = 0;
+for (i = 0; i < punctReduce.length; i++) {
+    if ((punctReduce[i] === " ") && (punctReduce[i + 1] === "e") && (punctReduce[i + 2] === "t") && (punctReduce[i] === " ")) {
+        etCount += 1; // check for " et " + increment counter
+    }
+}
+
+console.log(`The Latin word "et" appears ${etCount} times.`);
