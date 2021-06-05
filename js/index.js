@@ -44,8 +44,11 @@ if (hacker1.length > hacker2.length) {
 
 // 3.1 Print all the characters of the driver's name, separated by a space and in capitals i.e. "J O H N"
 
-console.log(hacker1.toUpperCase());
-console.log(`${hacker1[0]} ${hacker1[1]}`);
+let threeOne = '';
+for (i = 0; i < hacker1.length; i++) {
+    threeOne += hacker1[i] + " ";
+}
+console.log(threeOne.toUpperCase());
 
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "nhoJ"
 
