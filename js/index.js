@@ -80,3 +80,26 @@ for (i = 0; i < hacker1.length; i++) {
         break;
     }
 }
+
+
+//###########
+//# Bonus 1 #
+//###########
+
+// Go to lorem ipsum generator and: Generate 3 paragraphs.
+// Store the text in a variable type of string.
+
+// B1.1: Make your program count the number of words in the string.
+
+let loremIpsum = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+
+
+let wordCount = 1; // starting at 1, because there will be one more word than spaces
+for (i = 0; i < loremIpsum.length; i++) {
+    if (loremIpsum[i] === " ") {
+        wordCount += 1;
+    }
+}
+console.log(`The text contains ${wordCount} words.`);
+
+// B1.2: Make your program count the number of times the Latin word et appears.
