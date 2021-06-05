@@ -118,3 +118,42 @@ for (i = 0; i < punctReduce.length; i++) {
 }
 
 console.log(`The Latin word "et" appears ${etCount} times.`);
+
+
+//###########
+//# Bonus 2 #
+//###########
+
+// Create a new variable phraseToCheck and have it contain some string value.
+// Write a code that will check if the value we assigned to this variable is a Palindrome.
+
+// Hint: If you use Google to help you to find solution to this iteration, you might run into some solutions that use advanced string or array methods (such as join(), reverse(), etc.). However, try to apply the knowledge you currently have since you can build pretty nice solution with just using for loop, if-else statements with some break and continue... Just sayin' 😃
+
+// Here are some examples of palindromes:
+
+// "A man, a plan, a canal, Panama!"
+// "Amor, Roma"
+// "race car"
+// "stack cats"
+// "step on no pets"
+// "taco cat"
+// "put it up"
+// "Was it a car or a cat I saw?" and "No 'x' in Nixon".
+
+palinTest = "A man, a planT, a canal, Panama!"
+
+palinShort = '';
+for (i = 0; i < palinTest.length; i++) {
+    if ((/[a-zA-Z]/).test(palinTest[i]) === true) { // check for letters
+        palinShort += palinTest[i];
+    }
+}
+
+palinLow = palinShort.toLowerCase();
+
+for (i = 0; i < palinLow.length / 2; i++) {
+    if (palinLow[i] !== palinLow[palinLow.length - (i + 1)]) {
+        console.log("The string is NOT a palindrome.")
+        break;
+    }
+}
