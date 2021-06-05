@@ -68,13 +68,15 @@ console.log(threeTwoResult);
 // - Yo, the navigator goes first definitely.
 // - What?! You both have the same name?
 
-test = hacker1.localeCompare(hacker2);
-console.log(test);
-
-// if (hacker1.localCompare(hacker2)) == -1) {
-//   console.log("The driver's name goes first.");
-// } else if (hacker2.localCompare(hacker1)) == 1) {
-//   console.log("Yo, the navigator goes first definitely.");
-// } else {
-//   console.log("What?! You both have the same name?");
-// }
+for (i = 0; i < hacker1.length; i++) {
+    if (hacker1.toLowerCase() === hacker2.toLowerCase()) {
+        console.log("What?! You both have the same name?");
+        break;
+    } else if (hacker1.localeCompare(hacker2) === -1) {
+        console.log("The driver's name goes first.");
+        break;
+    } else if (hacker1.localeCompare(hacker2) === 1) {
+        console.log("Yo, the navigator goes first definitely.");
+        break;
+    }
+}
