@@ -4,7 +4,7 @@
 
 // 1.1 Create a variable `hacker1` with the driver's name.
 
-let hacker1 = "DangerMousedd";
+let hacker1 = "DangerMouse";
 
 // 1.2 Print `"The driver's name is XXXX"`.
 
@@ -28,7 +28,6 @@ console.log(`The navigator's name is ${hacker2}.`);
 // - It seems that the navigator has the longest name, it has XX characters. or
 // - Wow, you both have equally long names, XX characters!.
 
-console.log(hacker1.length);
 if (hacker1.length > hacker2.length) {
     console.log(`The driver has the longest name, it has ${hacker1.length} characters.`);
 } else if (hacker1.length < hacker2.length) {
@@ -52,9 +51,17 @@ console.log(threeOne.toUpperCase());
 
 // 3.2 Print all the characters of the navigator's name, in reverse order. i.e. "nhoJ"
 
-for (i = hacker2.length; i >= 0; i--) {
-    console.log(hacker2[i]);
+let threeTwo = [];
+for (i = 0; i < hacker2.length; i++) {
+    threeTwo.unshift(hacker2[i]);
 }
+
+let threeTwoResult = '';
+for (i = 0; i < threeTwo.length; i++) {
+    threeTwoResult += threeTwo[i];
+}
+
+console.log(threeTwoResult);
 
 // 3.3 Depending on the lexicographic order of the strings, print:
 // - The driver's name goes first.
